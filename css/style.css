@@ -1,0 +1,22 @@
+body {
+    width: 35em;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+}
+
+p, li {
+    line-height: 1.4em;
+}
+
+.hero-image {
+    float: left;
+    margin: 0 2em 1em 0;
+    width: 256px;
+    border: 1px solid #000;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
