@@ -8,6 +8,10 @@ p, li {
     line-height: 1.4em;
 }
 
+h2 {
+    font-size: 1.2em;
+}
+
 .hero-image {
     float: left;
     margin: 0 2em 1em 0;
