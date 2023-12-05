@@ -12,15 +12,40 @@ h2 {
     font-size: 1.2em;
 }
 
+/* Note: I use float because it is a technique I know.
+   This should *probably* be replaced with a flexbox-based
+   solution as soon as the course covers it. */
 .hero-image {
     float: left;
     margin: 0 2em 1em 0;
     width: 256px;
-    border: 1px solid #000;
 }
 
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
+}
+
+/* Because I used CSS to influence the size and flow
+   of the elements, I need to add a media query to
+   make sure to adjust the layout on smaller screens.
+
+   Added complexity never comes without drawbacks. */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    p, h1, h2, li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .hero-image {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
 }
